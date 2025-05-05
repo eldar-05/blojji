@@ -19,4 +19,16 @@ public class MainController {
 		return "about";
 	}
 
+	@GetMapping("/relogin")
+	public String relogin(Model model) {
+		model.addAttribute("title", "О нас");
+		return "relogin";
+	}
+
+	@GetMapping("/login")
+	public String login(Model model) {
+    	model.addAttribute("title", "Вход");
+    	return "login";
+	}
+
 }
